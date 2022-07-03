@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: #101010;
+    font-family: 'Inter', sans-serif;
+}
+
+
+@media screen and (min-width: 361px) {
+    .container {
+        height: 770px;
+        width: 360px; 
+    }
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.calc {
+    display: flex;
+    flex-direction: column;
+}
+
+.result {
+    height: 25vh;
+}
+.operations {
+    height: 25vh;
+    display: flex;
+}
+.buttons {
+    height: 50vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+.btn {
+    background-color: #272727;
+    border: none;
+    color: #d5cabd;
+    border-radius: 50%;
+    font-size: 42px;
+    margin: 12px;
+}
+.btn--zero {
+    border-radius: 30px;
+    grid-column: 3/1;
+    grid-row: -1/5;
+}
+
+.btn--equal {
+    background-color: #245dcb;
+}
+.btn--operations {
+    color: #245dcb;
+}
+
+.operations--paragraph {
+    height: 100%;
+    width: 100%;
+    color: #d5cabd;
+    font-size: 2rem;
+    font-weight: 200;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.mathSign {
+    color: #d5cabd;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-size: 2rem;
+    font-weight: 200;
+}
+.result--paragraph {
+    height: 100%;
+    width: 100%;
+    color: #d5cabd;
+    font-size: 3rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-direction: row-reverse;
+}
