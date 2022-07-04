@@ -7,20 +7,27 @@
 body {
     height: 100vh;
     width: 100vw;
-    background-color: #101010;
     font-family: 'Inter', sans-serif;
 }
 
+.container {
+    height: 100vh;
+    width: 100vw; 
+    background-color: #101010;
+}
 
 @media screen and (min-width: 361px) {
     .container {
-        height: 770px;
-        width: 360px; 
+        height: 700px;
+        width: 360px;
+        border-radius: 40px; 
+        background-color: #101010;
     }
     body {
         display: flex;
         justify-content: center;
         align-items: center;
+        background: radial-gradient(circle, rgba(0,100,255,1) 0%, rgba(14,9,121,1) 100%);
     }
 }
 
@@ -30,26 +37,32 @@ body {
 }
 
 .result {
-    height: 25vh;
+    height: 18vh;
+    margin: 12px;
 }
+
 .operations {
-    height: 25vh;
+    height: 18vh;
     display: flex;
+    margin: 12px;
 }
+
 .buttons {
-    height: 50vh;
+    height: 50%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
 }
+
 .btn {
     background-color: #272727;
     border: none;
     color: #d5cabd;
     border-radius: 50%;
     font-size: 42px;
-    margin: 12px;
+    margin: 8px;
 }
+
 .btn--zero {
     border-radius: 30px;
     grid-column: 3/1;
@@ -59,6 +72,7 @@ body {
 .btn--equal {
     background-color: #245dcb;
 }
+
 .btn--operations {
     color: #245dcb;
 }
@@ -73,6 +87,7 @@ body {
     justify-content: flex-end;
     align-items: flex-end;
 }
+
 .mathSign {
     color: #d5cabd;
     display: flex;
@@ -81,6 +96,7 @@ body {
     font-size: 2rem;
     font-weight: 200;
 }
+
 .result--paragraph {
     height: 100%;
     width: 100%;
@@ -88,6 +104,6 @@ body {
     font-size: 3rem;
     display: flex;
     justify-content: flex-start;
-    align-items: flex-end;
+    align-items: flex-start;
     flex-direction: row-reverse;
 }

@@ -6,6 +6,8 @@ const operation = document.querySelector("#operation");
 const mathSign = document.querySelector(".mathSign");
 const resultNumber = document.querySelector("#result");
 
+const sqrt = document.querySelector(".sqrt");
+
 let result = "";
 
 function displayNumbers() {
@@ -24,6 +26,9 @@ function operate() {
     }
 
     if(mathSign.innerHTML !== "") {
+        showResult();
+    }
+    if(mathSign.innerHTML === "√") {
         showResult();
     }
 
@@ -51,6 +56,12 @@ function showResult() {
             break;
         case '/':
             result = b / a;
+            break;
+        case '%':
+            result = (a * b) / 100;
+            break;
+        case '√':
+            result = Math.sqrt(b);
             break;     
     }
 
@@ -74,6 +85,8 @@ numbers.forEach(button => {
 operator.forEach(button => {
     button.addEventListener("click", operate)
 })
+
+sqrt.addEventListener("click", showResult);
 
 equal.addEventListener("click", showResult);
 
